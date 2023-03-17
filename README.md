@@ -15,6 +15,12 @@ You can always make a pull request! For major changes, please open an issue firs
 
 Please make sure to test updates!.
 
+## Image/Resources
+Icons:
+[Robot](https://www.flaticon.com/free-icon/robotic-arm_3273644?term=robot+arm&page=1&position=5&origin=search&related_id=3273644)
+[Application icon](https://www.hiclipart.com/free-transparent-background-png-clipart-vruhq)
+NOT MINE!!!
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
