@@ -2,6 +2,10 @@
 
 This application allows you to control a robot arm.
 
+Warning:
+This is currently just a prototype!
+don't expect this to work.
+
 ## Screenshots:
 ![Screenshot Main GUI](https://user-images.githubusercontent.com/56535364/225969822-18aa755f-5345-4837-93f9-d92879ec8ad3.png)
 
