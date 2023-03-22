@@ -6,6 +6,8 @@ Warning:
 This is currently just a prototype!
 don't expect this to work.
 
+Probably will add inverse kinematics later, but for now i'll make the basics first.
+
 ## Screenshots:
 ![Screenshot Main GUI](https://user-images.githubusercontent.com/56535364/225969822-18aa755f-5345-4837-93f9-d92879ec8ad3.png)
 
@@ -19,7 +21,17 @@ Please make sure to test updates!.
 Icons:
 * [Robot](https://www.flaticon.com/free-icon/robotic-arm_3273644?term=robot+arm&page=1&position=5&origin=search&related_id=3273644)
 * [Application icon](https://www.hiclipart.com/free-transparent-background-png-clipart-vruhq)
+
 * NOT MINE!!!
+
+
+## To Do:
+
+* Design settings menu ui.
+* Make buttons and input work.
+* Add serial capabilities.
+* Add inverse kinematics support.
+* More soon.
 
 ## License
 
