@@ -1,7 +1,6 @@
 module org.suermondt.robotarmgui {
     requires javafx.controls;
     requires javafx.fxml;
-	requires com.fazecast.jSerialComm;
 
 
 	opens org.suermondt.robotarmgui to javafx.fxml;

@@ -30,8 +30,9 @@ public class Controller extends Main {
     TextField axis5Field;
     @FXML
     Slider gripperField;
-    public void serialButtonMenu(ActionEvent e) {
+    public void ConnectSerial(ActionEvent e) {
         System.out.println("Button clicked!"); // To Do!
+
     }
     public void sendCommandButton(ActionEvent e) {
         System.out.println("Button clicked!"); // To Do!
