@@ -3,9 +3,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import org.suermondt.robotarmgui.Main;
+import java.io.IOException;
+import com.fazecast.jSerialComm.SerialPort;
+
 
 
 public class Controller extends Main {
+    SerialPort sp;
     @FXML
     Label axis1Label;
     @FXML
@@ -30,11 +34,27 @@ public class Controller extends Main {
     TextField axis5Field;
     @FXML
     Slider gripperField;
+    @FXML
+    TextField COMfield;
+    @FXML
+    TextField BAUDfield;
     public void ConnectSerial(ActionEvent e) {
         System.out.println("Button clicked!"); // To Do!
+        System.out.println(COMfield.getText());
+        System.out.println(BAUDfield.getText());
+        sp = SerialPort.getCommPort(COMfield.getText()); // device name
+        sp.setComPortParameters(Integer.parseInt(BAUDfield.getText()), 8, 1, 0); // default connection settings for Arduino
+        sp.setComPortTimeouts(SerialPort.TIMEOUT_WRITE_BLOCKING, 0, 0); // block until bytes can be written
+        if (sp.openPort()) {
+            System.out.println("Port is open :)");
+        } else {
+            System.out.println("Failed to open port :(");
+        }
+
+
 
     }
-    public void sendCommandButton(ActionEvent e) {
+    public void sendCommandButton(ActionEvent e) throws IOException {
         System.out.println("Button clicked!"); // To Do!
         Alert sendSure = new Alert(Alert.AlertType.CONFIRMATION);
         sendSure.setTitle("Are you sure?");
@@ -44,6 +64,8 @@ public class Controller extends Main {
         sendSure.showAndWait();
         if (sendSure.getResult() == ButtonType.YES) {
             System.out.println("send button clicked!");
+            sp.getOutputStream().write(1);
+            sp.getOutputStream().flush();
         } else {
             System.out.println("operation cancelled.");
         }
