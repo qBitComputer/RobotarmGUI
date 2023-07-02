@@ -59,24 +59,25 @@ public class Controller extends Main {
         Alert sendSure = new Alert(Alert.AlertType.CONFIRMATION);
         sendSure.setTitle("Are you sure?");
         sendSure.setHeaderText(null);
-        sendSure.setContentText("Please check your commands before you send them. If the coordinates aren't properly set, your arm will fail to perform any action.");
+        sendSure.setContentText("Please double check before sending!");
         sendSure.getButtonTypes().setAll(ButtonType.YES, ButtonType.CANCEL);
         sendSure.showAndWait();
         if (sendSure.getResult() == ButtonType.YES) {
             System.out.println("send button clicked!");
-            sp.getOutputStream().write(1);
-            sp.getOutputStream().flush();
+            axis1Label.setText(axis1Field.getText());
+            axis2Label.setText(axis2Field.getText());
+            axis3Label.setText(axis3Field.getText());
+            axis4Label.setText(axis4Field.getText());
+            axis5Label.setText(axis5Field.getText());
+            gripperLabel.setText(String.valueOf(gripperField.getValue()));
+
         } else {
             System.out.println("operation cancelled.");
         }
     }
     public void setCommandButton(ActionEvent e) {
         System.out.println("set positions!"); // To Do!
-        axis1Label.setText(axis1Field.getText());
-        axis2Label.setText(axis2Field.getText());
-        axis3Label.setText(axis3Field.getText());
-        axis4Label.setText(axis4Field.getText());
-        axis5Label.setText(axis5Field.getText());
-        gripperLabel.setText(String.valueOf(gripperField.getValue()));
+
+
     }
 }
